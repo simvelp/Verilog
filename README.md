@@ -17,4 +17,7 @@
 
     ![4:1 MUX](4_1_MUX.jpg)
 
-    
+
+- `FSM` : Verilog RTL for FSM
+
+    ![FSM](FSM.jpg)
