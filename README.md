@@ -13,3 +13,8 @@
   
 - `MUX.v` : Verilog RTL for MUX gate  
   
+- `MUX_4_1` : Verilog RTL for 4:1 MUX gate
+
+    ![4:1 MUX](4_1_MUX.jpg)
+
+    
