@@ -21,3 +21,17 @@
 - `FSM` : Verilog RTL for FSM
 
     ![FSM](FSM.jpg)
+
+
+- `Ripple-Carry-Adder` : Verilog RTL for 16bit Ripple Carry Adder
+    ![Ripple Carry Adder](Ripple-Carry-Adder.jpg) sourece:  https://ko.m.wikipedia.org/wiki/%ED%8C%8C%EC%9D%BC:4-bit_ripple_carry_adder.svg
+
+    Simulation result example.
+
+    | Time(ns) |     A     |     B     | Cin |   Sum   | Cout |
+    |----------|-----------|-----------|-----|---------|------|
+    |   0      | 0x0000    | 0x0000    | 0   | 0x0000  | 0    |
+    |  10      | 0x0001    | 0x0001    | 0   | 0x0002  | 0    |
+    |  20      | 0xAAAA    | 0x5555    | 0   | 0xFFFF  | 0    |
+    |  30      | 0xFFFF    | 0x0001    | 0   | 0x0000  | 1    |
+    |  40      | 0xFFFF    | 0xFFFF    | 1   | 0xFFFF  | 1    |
