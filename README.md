@@ -53,7 +53,7 @@
 
 
 - `Half Subtractor` : Verilog RTL for 1bit half subtractor
-    ![Half Subtractor](Half_subtractor.jpg)
+    ![Half Subtractor](Half_subtractor.jpg) sources: https://de-iitr.vlabs.ac.in/exp/half-full-subtractor/theory.html
 
     Simulatio result example
 
@@ -65,4 +65,3 @@
     |  30      |    1     |     1     |     0     |        0       |
 
     Bout stands for "Borrow Out". In a subtractor, this signal indicates whether a borrow is needed from the next higher bit.
-    
