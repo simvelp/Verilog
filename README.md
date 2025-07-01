@@ -65,3 +65,22 @@
     |  30      |    1     |     1     |     0     |        0       |
 
     Bout stands for "Borrow Out". In a subtractor, this signal indicates whether a borrow is needed from the next higher bit.
+
+- `Full subtractor` : Verilog RTL for 1bit Full subtractor
+    ![Full subtractor](full_subtractor.jpg)
+    sources: https://de-iitr.vlabs.ac.in/exp/half-full-subtractor/theory.html
+
+    Simulation result example
+
+    |  A  |  B  | Bin | Difference (D) | Borrow Out (Bout) |
+    |-----|-----|-----|----------------|-------------------|
+    |  0  |  0  |  0  |        0       |         0         |
+    |  0  |  0  |  1  |        1       |         1         |
+    |  0  |  1  |  0  |        1       |         1         |
+    |  0  |  1  |  1  |        0       |         1         |
+    |  1  |  0  |  0  |        1       |         0         |
+    |  1  |  0  |  1  |        0       |         0         |
+    |  1  |  1  |  0  |        0       |         0         |
+    |  1  |  1  |  1  |        1       |         1         |
+
+    The key difference between a Full subtractor and a Half Subtractor is that the Full Subtractor takes three inputs (A, B, and Bin), whereas the Half Subtractor only takes two inputs (A and B). The Full Subtractor can handle a borrow from a previous stage, making it suitable for multi bit subtraction.
