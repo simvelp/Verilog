@@ -53,7 +53,8 @@
 
 
 - `Half Subtractor` : Verilog RTL for 1bit half subtractor
-    ![Half Subtractor](Half_subtractor.jpg) sources: https://de-iitr.vlabs.ac.in/exp/half-full-subtractor/theory.html
+    ![Half Subtractor](Half_subtractor.jpg) 
+    sources: https://de-iitr.vlabs.ac.in/exp/half-full-subtractor/theory.html
 
     Simulatio result example
 
