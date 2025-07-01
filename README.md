@@ -37,12 +37,12 @@
     |  40      | 0xFFFF    | 0xFFFF    | 1   | 0xFFFF  | 1    |
 
 ***
-- `Adder & Subtractor` : Cerilog RTL for 16bit Adder & Subtractor
+- `Adder & Subtractor` : Verilog RTL for 16bit Adder & Subtractor
     ![Adder & Subtractor](add_sub_16bit.jpg) source: https://suyeon96.tistory.com/7
 
     Simulation result example
 
-    | Time(ns) | M (연산) |     A     |     B     |     S (결과)    | Cout |
+    | Time(ns) | M (연산) |     A     |     B     |     S (result)   | Cout |
     |----------|----------|-----------|-----------|-----------------|------|
     |   0      |    0     | 0x0005    | 0x0003    | 0x0008          | 0    |
     |  10      |    0     | 0x0064    | 0x00C8    | 0x012C (= 300)  | 0    |
@@ -50,3 +50,19 @@
     |  30      |    1     | 0x0064    | 0x00C8    | 0xFF9C (= -100) | 0    |
     |  40      |    0     | 0xFFFF    | 0x0001    | 0x0000          | 1    |
     |  50      |    1     | 0x0000    | 0x0001    | 0xFFFF (= -1)   | 0    |
+
+
+- `Half Subtractor` : Verilog RTL for 1bit half subtractor
+    ![Half Subtractor](Half_subtractor.jpg)
+
+    Simulatio result example
+
+    | Time(ns) |    A     |     B     |    Bout   |    D (result)  |
+    |----------|----------|-----------|-----------|----------------|
+    |   0      |    0     |     0     |     0     |        0       |
+    |  10      |    0     |     1     |     1     |        1       |
+    |  20      |    1     |     0     |     1     |        0       |
+    |  30      |    1     |     1     |     0     |        0       |
+
+    Bout stands for "Borrow Out". In a subtractor, this signal indicates whether a borrow is needed from the next higher bit.
+    
