@@ -23,6 +23,25 @@
     ![FSM](FSM.jpg)
 
 ***
+- `FSM-Moore Machine` : verilog RTL for FSM
+
+    ![Moore Machine](FSM-moore.jpg)
+
+    Simulation result example
+
+    | Time (ns) | Reset | Input | State     | Output |
+    |-----------|-------|-------|-----------|--------|
+    | 0         | 1     | 00    | XX (reset)| XX     |
+    | 10        | 0     | 00    | 00 (S0)   | 0001   | 
+    | 20        | 0     | 01    | 01 (S1)   | 0010   |
+    | 25        | 0     | 01    | 01 (S1)   | 0010   |
+    | 30        | 0     | 00    | 00 (S0)   | 0001   |
+    | 40        | 0     | 10    | 10 (S2)   | 0100   |
+    | 50        | 0     | 11    | 11 (S3)   | 1000   |
+    | 60        | 0     | 11    | 11 (S3)   | 1000   |
+    | 70        | 0     | 00    | 00 (S0)   | 0001   | 
+
+***
 - `Ripple-Carry-Adder` : Verilog RTL for 16bit Ripple Carry Adder
     ![Ripple Carry Adder](Ripple-Carry-Adder.jpg) sourece:  https://ko.m.wikipedia.org/wiki/%ED%8C%8C%EC%9D%BC:4-bit_ripple_carry_adder.svg
 
@@ -51,7 +70,7 @@
     |  40      |    0     | 0xFFFF    | 0x0001    | 0x0000          | 1    |
     |  50      |    1     | 0x0000    | 0x0001    | 0xFFFF (= -1)   | 0    |
 
-
+***
 - `Half Subtractor` : Verilog RTL for 1bit half subtractor
     ![Half Subtractor](Half_subtractor.jpg) 
     sources: https://de-iitr.vlabs.ac.in/exp/half-full-subtractor/theory.html
@@ -67,6 +86,7 @@
 
     Bout stands for "Borrow Out". In a subtractor, this signal indicates whether a borrow is needed from the next higher bit.
 
+***
 - `Full subtractor` : Verilog RTL for 1bit Full subtractor
     ![Full subtractor](full_subtractor.jpg)
     sources: https://de-iitr.vlabs.ac.in/exp/half-full-subtractor/theory.html
@@ -85,3 +105,5 @@
     |  1  |  1  |  1  |        1       |         1         |
 
     The key difference between a Full subtractor and a Half Subtractor is that the Full Subtractor takes three inputs (A, B, and Bin), whereas the Half Subtractor only takes two inputs (A and B). The Full Subtractor can handle a borrow from a previous stage, making it suitable for multi bit subtraction.
+
+***
