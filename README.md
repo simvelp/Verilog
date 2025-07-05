@@ -23,7 +23,7 @@
     ![FSM](FSM.jpg)
 
 ***
-- `FSM-Moore Machine` : verilog RTL for FSM
+- `FSM-Moore Machine` : verilog RTL for FSM Moore
 
     ![Moore Machine](FSM-moore.jpg)
 
@@ -40,6 +40,33 @@
     | 50        | 0     | 11    | 11 (S3)   | 1000   |
     | 60        | 0     | 11    | 11 (S3)   | 1000   |
     | 70        | 0     | 00    | 00 (S0)   | 0001   | 
+
+***
+- `FSM-Mealy Machine` : Verilog RTL for FSM Mealy
+
+    ![Mealy Machine](FSM_mealy.jpg)
+
+    Simulation result example
+
+    | Time (ns) | Reset | Input (`in`) | State (`state`) | Output (`out`) | Description                                           |
+    |-----------|--------|---------------|------------------|----------------|-------------------------------------------------------|
+    | 0         | 1      | 00            | XX               | XX             | Reset active (initialization in progress)            |
+    | 10        | 0      | 00            | 00 (S0)          | 0              | Reset released, remains in S0                        |
+    | 20        | 0      | 01            | 01 (S1)          | 0              | S0 → S1, output = 0                                  |
+    | 30        | 0      | 00            | 00 (S0)          | 1              | S1 → S0, output = 1 (special case in S1 with 00)     |
+    | 40        | 0      | 11            | 11 (S3)          | 1              | S0 → S3, output = 1                                  |
+    | 50        | 0      | 01            | 01 (S1)          | 0              | S3 → S1, output = 0                                  |
+    | 60        | 0      | 00            | 00 (S0)          | 1              | S1 → S0, output = 1 (again, special case)            |
+    | 70        | 0      | 10            | 10 (S2)          | 0              | S0 → S2, output = 0                                  |
+    | 80        | 0      | 11            | 11 (S3)          | 1              | S2 → S3, output = 1                                  |
+    | 90        | 0      | 10            | 10 (S2)          | 0              | S3 → S2, output = 0                                  |
+    | 100       | 0      | 01            | 01 (S1)          | 0              | S2 → S1, output = 0                                  |
+    | 110       | 0      | 00            | 00 (S0)          | 1              | S1 → S0, output = 1 (special case once more)         |
+
+
+    Mealy Machine, The output depends on both the current state and the input (Mealy characteristic)
+
+
 
 ***
 - `Ripple-Carry-Adder` : Verilog RTL for 16bit Ripple Carry Adder
