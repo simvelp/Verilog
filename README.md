@@ -66,6 +66,23 @@
 
     Mealy Machine, The output depends on both the current state and the input (Mealy characteristic)
 
+***
+- `8:3 Encoder` : Verilog RTL for 8:3 Encoder
+
+    ![8:3Encoder](_8_3Encoder.jpg)
+
+    Simulation result example
+
+    |     Input  in[7:0]   | Output    code[2:0]) | Description       |
+    |----------------------|----------------------|-------------------|
+    | 0000 0001            | 000                  | D0 → 0            |
+    | 0000 0010            | 001                  | D1 → 1            |
+    | 0000 0100            | 010                  | D2 → 2            |
+    | 0000 1000            | 011                  | D3 → 3            |
+    | 0001 0000            | 100                  | D4 → 4            |
+    | 0010 0000            | 101                  | D5 → 5            |
+    | 0100 0000            | 110                  | D6 → 6            |
+    | 1000 0000            | 111                  | D7 → 7            |
 
 
 ***
